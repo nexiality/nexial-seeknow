@@ -1,4 +1,4 @@
-package org.uptospeed.seeknow;
+package org.nexial.seeknow;
 
 import java.awt.*;
 import java.awt.image.*;
@@ -12,6 +12,9 @@ import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.nexial.seeknow.processor.AcceptAllProcessor;
+import org.nexial.seeknow.processor.FirstContainsProcessor;
+import org.nexial.seeknow.processor.SeeknowProcessor;
 
 public class Seeknow2Test {
 	private static final int SLEEP_BETWEEN_TESTS = 2500;
@@ -234,7 +237,8 @@ public class Seeknow2Test {
 				return true;
 			}
 
-			@Override
+
+            @Override
 			public List<SeeknowData> listMatch() { return data; }
 		};
 

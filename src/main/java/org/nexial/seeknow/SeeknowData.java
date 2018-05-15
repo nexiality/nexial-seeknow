@@ -1,4 +1,4 @@
-package org.uptospeed.seeknow;
+package org.nexial.seeknow;
 
 import java.awt.*;
 import java.io.Serializable;

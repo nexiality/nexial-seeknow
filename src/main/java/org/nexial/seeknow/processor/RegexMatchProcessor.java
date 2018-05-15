@@ -1,9 +1,10 @@
-package org.uptospeed.seeknow;
+package org.nexial.seeknow.processor;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
+import org.nexial.seeknow.SeeknowData;
 
 public class RegexMatchProcessor extends AcceptAllProcessor {
 	protected Pattern pattern;

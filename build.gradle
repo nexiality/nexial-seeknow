@@ -1,5 +1,5 @@
-group 'uptospeed'
-version '0.9'
+group 'nexial'
+version '1.0'
 
 apply plugin: 'java'
 apply plugin: 'distribution'
@@ -9,7 +9,7 @@ apply plugin: 'eclipse'
 
 targetCompatibility = 1.8
 sourceCompatibility = 1.8
-archivesBaseName = 'seeknow'
+archivesBaseName = 'nexial-seeknow'
 
 repositories {
 	//	mavenLocal()
@@ -50,7 +50,7 @@ test {
 // run: gradle singleDependentJar
 task singleDependentJar(type: Jar) {
 	manifest {
-		attributes 'Implementation-Title': 'org.uptospeed.seeknow',
+		attributes 'Implementation-Title': 'org.nexial.seeknow',
 		           'Implementation-Version': '1.0'
 	}
 	baseName = project.name
@@ -93,7 +93,7 @@ distributions {
 	main {
 		contents {
 			into('lib') {
-				from Jar
+				from singleDependentJar
 				from 'lib'
 				from(project.configurations.runtime)
 			}

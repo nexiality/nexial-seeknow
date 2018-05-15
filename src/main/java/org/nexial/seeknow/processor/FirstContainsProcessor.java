@@ -1,6 +1,7 @@
-package org.uptospeed.seeknow;
+package org.nexial.seeknow.processor;
 
 import org.apache.commons.lang3.StringUtils;
+import org.nexial.seeknow.SeeknowData;
 
 public class FirstContainsProcessor extends AcceptAllProcessor {
 	protected String containing;

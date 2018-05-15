@@ -1,4 +1,4 @@
-package org.uptospeed.seeknow;
+package org.nexial.seeknow;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,6 +8,9 @@ import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.nexial.seeknow.processor.AcceptAllProcessor;
+import org.nexial.seeknow.processor.CriteriaBasedProcessor;
+import org.nexial.seeknow.processor.SeeknowCriteria;
 
 public class Seeknow3Test {
 	private static final int SLEEP_BETWEEN_TESTS = 2500;
@@ -120,6 +123,44 @@ public class Seeknow3Test {
 		Assert.assertEquals("!NUL PROCESS! Site: 1800 FINISHED 000000", found.get(25));
 		Assert.assertEquals("!NUL PROCESS! Site: 1900 FINISHED 000000", found.get(26));
 		Assert.assertEquals("!NUL_PROCESS! Site: 2000 FINISHED 000000", found.get(27));
+
+	}
+
+	@Test
+	public void fromScreenSelection3() throws Throwable {
+		SeeknowFrame f = newSeeknowFrame("/images/seeknow4-processes.png");
+		Thread.sleep(3000);
+
+		int x = 15;
+		int y = 137;
+		int width = 650 - x;
+		int height = 557 - y;
+
+		SeeknowCriteria criteria = new SeeknowCriteria();
+		criteria.setLimitRows("1,5,2");
+
+		System.out.println("seeknow over (" + x + "," + y + "," + width + "," + height + ")");
+		CriteriaBasedProcessor processor = new CriteriaBasedProcessor(criteria);
+
+		processor.setStopOnEmptyText(false);
+		seeknow.fromScreenSelection(x, y, width, height, processor);
+		f.close();
+		List<SeeknowData> seeknowData = processor.listMatch();
+
+		List<String> found = new ArrayList<>();
+		seeknowData.forEach(data -> {
+			if (StringUtils.isNotBlank(data.getText())) {
+				System.out.println(data);
+				found.add(data.getText());
+			}
+		});
+
+		found.forEach(System.out::println);
+
+		Assert.assertEquals(3, found.size());
+		Assert.assertEquals("pdps806 Site: CAA 300 FINISHED 000001", found.get(0));
+		Assert.assertEquals("pdps811 Site: CAA 400 FINISHED 000001", found.get(1));
+		Assert.assertEquals("!NUL PROCESS! Site: CAA 500 FINISHED 000000", found.get(2));
 
 	}
 

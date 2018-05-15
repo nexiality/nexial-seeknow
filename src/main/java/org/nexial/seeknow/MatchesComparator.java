@@ -1,4 +1,4 @@
-package org.uptospeed.seeknow;
+package org.nexial.seeknow;
 
 import java.util.Comparator;
 

@@ -1,8 +1,9 @@
-package org.uptospeed.seeknow;
+package org.nexial.seeknow.processor;
 
 import java.util.regex.Matcher;
 
 import org.apache.commons.lang3.StringUtils;
+import org.nexial.seeknow.SeeknowData;
 
 public class FirstRegexMatchProcessor extends RegexMatchProcessor {
 

@@ -1,4 +1,4 @@
-package org.uptospeed.seeknow;
+package org.nexial.seeknow;
 
 public class SeeknowFactoryTest {
 	public static void main(String[] args) throws Throwable {
