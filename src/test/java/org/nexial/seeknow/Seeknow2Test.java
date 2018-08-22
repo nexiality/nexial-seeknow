@@ -161,7 +161,7 @@ public class Seeknow2Test {
 		Thread.sleep(3000);
 
 		int x = 10;
-		int y = 45;
+		int y = 46;
 		int width = f.getWidth() - x;
 		int height = f.getHeight() - y + Y_OFFSET;
 

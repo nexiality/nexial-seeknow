@@ -58,8 +58,8 @@ public class Seeknow3Test {
 		f.close();
 		found.forEach(System.out::println);
 
-		// Assert.assertEquals("Runsheet Name: PROD_PYRL_NY Runsheet Desc: NY-PP-00146694", found.get(0));
-		// Assert.assertEquals("Runsheet ID: 0009005651", found.get(1));
+		Assert.assertEquals("Runsheet Name: PROD_PYRL_NY Runsheet Desc: NY-PP-00146694", found.get(0));
+		Assert.assertEquals("Runsheet ID: 0009005651", found.get(1));
 		Assert.assertEquals("Process Name Process Desc. Jobno Status Pulse", found.get(2));
 		Assert.assertEquals("!NUL PROCESS! Site: NYA 100 FINISHED 000000", found.get(3));
 		Assert.assertEquals("pdps806 Site: NYA 300 FINISHED 000001", found.get(4));

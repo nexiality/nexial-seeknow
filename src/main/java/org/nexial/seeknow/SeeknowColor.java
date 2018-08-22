@@ -37,6 +37,6 @@ public class SeeknowColor {
 
 	@Override
 	public String toString() {
-		return "[red=" + color.getRed() + ", green=" + color.getGreen() + ", blue=" + color.getBlue() + "]";
+		return color.toString();
 	}
 }

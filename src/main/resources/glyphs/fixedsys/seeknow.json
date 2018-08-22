@@ -4,7 +4,7 @@
 	"aggressivelyTrimSpace": true,
 	"trimSpacesBefore": [ "_", "-", ",", "." ],
 	"trimSpacesAfter": [ "_", "-" ],
-	"backgroundColors": [ "255x255x255", "186x182x186", "157x153x157" ],
+	"backgroundColors": [ "255x255x255", "186x182x186", "157x153x157", "198x195x198", "173x170x173" ],
 	"glyphs": [
 		{ "image": "0.png", "character": "0", "similarity": 99 },
 		{ "image": "1.png", "character": "1", "similarity": 99 },
