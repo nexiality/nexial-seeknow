@@ -1,5 +1,5 @@
 group 'nexial'
-version '1.1'
+version '1.2'
 
 apply plugin: 'java'
 apply plugin: 'distribution'
@@ -70,6 +70,7 @@ task singleDependentJar(type: Jar) {
 		exclude "org/apache/"
 		exclude "org/slf4j/"
 		exclude "ch/"
+		exclude "Settings/"
 	}
 	with jar {
 		exclude('logback.xml')
