@@ -23,7 +23,7 @@ dependencies {
 	// support: apache commons
 	compile("commons-io:commons-io:+")
 	compile("org.apache.commons:commons-lang3:+")
-	compile("org.apache.commons:commons-collections4:+")
+	compile("org.apache.commons:commons-collections4:4.3")
 
 	// support: sikuli
 	compile('com.sikulix:sikulixlibswin:+')
@@ -34,12 +34,12 @@ dependencies {
 	compile("com.google.code.gson:gson:+")
 
 	// support: logback
-	compile("ch.qos.logback:logback-classic:1.2.3")
-	compile("ch.qos.logback:logback-core:1.2.3")
+	compile("ch.qos.logback:logback-classic:+")
+	compile("ch.qos.logback:logback-core:+")
 
 	compile fileTree(dir: 'lib', include: '*.jar')
 
-	testCompile("junit:junit:4.12")
+	testCompile("junit:junit:4.+")
 }
 
 test {
